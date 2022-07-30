@@ -47,7 +47,7 @@ promise.then((res) => {
 
 if (data.length === 0 || data === undefined) {
   head = document.createElement("h1");
-  head.id = "loader";
+  head.id = "#loader";
   head.textContent = "Loding...";
   main.appendChild(head);
   checkhead = 1;
@@ -96,7 +96,7 @@ function displayGrid(data2) {
         button.classList.add("available-seat");
       }
       button.textContent = c;
-      button.id = "booking-grid-" + c;
+      button.id = "#booking-grid-" + c;
       tr.appendChild(td);
       console.log("cell: " + c + " " + i);
     }
@@ -243,6 +243,12 @@ function successBooking() {
   let emdiv = document.createElement("h3");
   emdiv.textContent = "Email number: " + email.value;
   newcontent3.appendChild(emdiv);
-  document.body.appendChild(newcontent3);
-}
 
+  document.body.appendChild(newcontent3);
+
+  // again the content inside #booker div is deleted and then
+  // replaced by a div with id="Success".
+  // Inside that it shows "Booking details",
+  //  followed by the booking details, seat numbers,
+  //  email and phone number.
+}
